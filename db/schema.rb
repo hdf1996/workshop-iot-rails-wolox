@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171205114142) do
   enable_extension "plpgsql"
 
   create_table "devices", force: :cascade do |t|
-    t.string "state"
+    t.boolean "state"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
