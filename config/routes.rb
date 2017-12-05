@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'static/index'
-
-  root 'static#index'
+  resources :dashboards, only: [:show]
 
   resources :devices, only: [:show] do
     member do
