@@ -8,7 +8,7 @@ class DevicesController < ApplicationController
   end
 
   def toggle
-    device.toggle_state!
+    device.toggle! :state
     render json: device
   end
 
