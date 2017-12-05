@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :devices, only: [:show] do
+    member do
+      get :state
+      post :toggle
+    end
+  end
 end
